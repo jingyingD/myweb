@@ -38,13 +38,13 @@
 
     <div class="collapse navbar-collapse text-center" id="navigation">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="Home.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="gallery.html">Gallery</a>
+          <a class="nav-link" href="gallery.html">Portfolio</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item  active">
           <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
@@ -77,7 +77,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <p><strong>Hi, I’m Jingying (Crystal) Deng — an artist, game designer, and researcher exploring how emotion, interaction, and imagination shape learning.</strong></p>
+        <p><strong>Hi, I'm Jingying (Crystal) Deng — an artist, game designer, and researcher exploring how emotion, interaction, and imagination shape learning.</strong></p>
         <p>From stitching futures with computational quilting to building AI-enhanced game worlds, I blend art and science to create experiences that are not only beautiful but meaningful. My work bridges human-computer interaction, educational technology, and visual storytelling — always asking: How can we design to feel, connect, and grow?</p>
       </div>
       <div class="col-md-4 text-center drag-lg-top">
@@ -114,7 +114,7 @@
       <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
         <img src="images/icons/print.png" class="mb-4" alt="icon">
         <h4 class="mb-4">Deliver and Reflect</h4>
-        <p>I share my work through exhibitions, academic papers, and live demos — always reflecting on impact, inclusion, and user empowerment. My delivery isn’t just a product — it’s a platform for learning and imagination.</p>
+        <p>I share my work through exhibitions, academic papers, and live demos — always reflecting on impact, inclusion, and user empowerment. My delivery isn't just a product — it's a platform for learning and imagination.</p>
       </div>
     </div>
   </div>
@@ -194,18 +194,18 @@
 </div>
 
 <!-- footer -->
-<footer class="bg-dark footer-section">
+<footer class="footer-section" style="background-color: #6c80a7;">
   <div class="section">
     <div class="container">
       <div class="row">
       </div>
     </div>
   </div>
-  <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light">Copyright &copy;<script>
+  <div class="border-top text-center py-5" style="border-color: rgba(255,255,255,0.1) !important;">
+    <p class="mb-0" style="color: #ffffff;">Copyright &copy;<script>
         var CurrentYear = new Date().getFullYear()
         document.write(CurrentYear)
-      </script> <a class="text-white-50" target="_blank" href="http://www.crystaldjy.com" title="by Jingying Deng">by Jingying Deng. All rights reserved. </a></p>
+      </script> <a style="color: rgba(255,255,255,0.8);" target="_blank" href="http://www.crystaldjy.com" title="by Jingying Deng">by Jingying Deng. All rights reserved. </a></p>
   </div>
 </footer>
 <!-- /footer -->
@@ -335,6 +335,65 @@
           }
         }
       ]
+    });
+  });
+</script>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #6c80a7;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    border: 2px solid white;
+  }
+
+  .back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .back-to-top:hover {
+    background-color: #5a6b8f;
+    transform: translateY(-3px);
+  }
+</style>
+
+<!-- 返回顶部按钮 -->
+<div class="back-to-top">
+  <i class="ti-arrow-up"></i>
+</div>
+
+<!-- 返回顶部按钮的JavaScript -->
+<script>
+  $(document).ready(function() {
+    // 监听滚动事件
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 300) {
+        $('.back-to-top').addClass('show');
+      } else {
+        $('.back-to-top').removeClass('show');
+      }
+    });
+
+    // 点击返回顶部
+    $('.back-to-top').click(function() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
     });
   });
 </script>

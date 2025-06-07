@@ -241,21 +241,58 @@
 </div>
 
 <!-- footer -->
-<footer class="bg-dark footer-section">
+<footer class="footer-section" style="background-color: #6c80a7;">
   <div class="section">
     <div class="container">
       <div class="row">
       </div>
     </div>
   </div>
-  <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light">Copyright &copy;<script>
+  <div class="border-top text-center py-5" style="border-color: rgba(255,255,255,0.1) !important;">
+    <p class="mb-0" style="color: #ffffff;">Copyright &copy;<script>
         var CurrentYear = new Date().getFullYear()
         document.write(CurrentYear)
-      </script> <a class="text-white-50" target="_blank" href="http://www.crystaldjy.com" title="by Jingying Deng">by Jingying Deng. All rights reserved. </a></p>
+      </script> <a style="color: rgba(255,255,255,0.8);" target="_blank" href="http://www.crystaldjy.com" title="by Jingying Deng">by Jingying Deng. All rights reserved. </a></p>
   </div>
 </footer>
 <!-- /footer -->
+
+<style>
+  .back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #6c80a7;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    border: 2px solid white;
+  }
+
+  .back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .back-to-top:hover {
+    background-color: #5a6b8f;
+    transform: translateY(-3px);
+  }
+</style>
+
+<!-- 返回顶部按钮 -->
+<div class="back-to-top">
+  <i class="ti-arrow-up"></i>
+</div>
 
 <!-- jQuery -->
 <script src="plugins/jQuery/jquery.min.js"></script>
@@ -268,43 +305,25 @@
 
 <!-- Main Script -->
 <script src="js/script.js"></script>
-<!-- 插件 js -->
-<script src="plugins/jQuery/jquery.min.js"></script>
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-<script src="plugins/slick/slick.min.js"></script>
-<script src="plugins/shuffle/shuffle.min.js"></script>
 
-<!-- Main Script -->
-<script src="js/script.js"></script>
-
-<!-- AOS 动画库 -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- 返回顶部按钮的JavaScript -->
 <script>
-  AOS.init();
-</script>
-<script>
-  window.addEventListener('load', () => {
-    // 分别拆分 .jump-text 和 .section-title 成单个字母
-    new SplitType('.jump-text', { types: 'chars' });
-    new SplitType('.section-title', { types: 'chars' });
+  $(document).ready(function() {
+    // 监听滚动事件
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 300) {
+        $('.back-to-top').addClass('show');
+      } else {
+        $('.back-to-top').removeClass('show');
+      }
+    });
 
-    // 统一选择所有需要跳动的文字
-    const jumpTexts = document.querySelectorAll('.jump-text, .section-title');
-
-    jumpTexts.forEach(text => {
-      text.addEventListener('mouseenter', () => {
-        gsap.fromTo(text.querySelectorAll('.char'), 
-          { y: 0 }, 
-          { 
-            y: -15, 
-            duration: 0.3, 
-            ease: "power2.out", 
-            yoyo: true, 
-            repeat: 1,
-            stagger: 0.05 // 核心：一颗一颗顺序跳动
-          }
-        );
-      });
+    // 点击返回顶部
+    $('.back-to-top').click(function() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
     });
   });
 </script>

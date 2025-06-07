@@ -97,7 +97,7 @@ h6, .h6 {
 
 .btn-primary {
   background: #6c80a7;
-  color: #fff;
+  color: #ffffff;
 }
 .btn-primary:active {
   background: #542cb7 !important;
@@ -120,18 +120,18 @@ h6, .h6 {
 }
 
 body {
-  background-color: #fff;
+  background-color: #ffffff;
   overflow-x: hidden;
 }
 
 ::-moz-selection {
   background: #542cb7;
-  color: #fff;
+  color: #ffffff;
 }
 
 ::selection {
   background: #542cb7;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* preloader */
@@ -141,7 +141,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: #ffffff;
   z-index: 999;
   display: flex;
   align-items: center;
@@ -401,12 +401,25 @@ textarea.form-control {
 
 /* /card */
 .navigation {
-  padding: 40px 130px;
+  padding: 20px 130px;
   transition: 0.3s ease;
 }
 .navigation.nav-bg {
   background-color: #6c80a7;
   padding: 15px 100px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-nav {
+  margin-left: auto;
 }
 @media (max-width: 991px) {
   .navigation.nav-bg {
@@ -879,7 +892,7 @@ blockquote {
   }
 
   #contactModal .modal-card {
-    background: #fff;
+    background: #f6f4ee;
     width: 100%;
     max-width: 500px;
     max-height: 90vh;

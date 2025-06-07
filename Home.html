@@ -12,7 +12,8 @@
   <!-- Plugins -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="plugins/slick/slick.css">
-  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+ <!-- themefy-icon -->
+ <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
 
   <!-- AOS Animation Library -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -42,7 +43,7 @@
           <a class="nav-link" href="Home.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="gallery.html">Gallery</a>
+          <a class="nav-link" href="gallery.html">Portfolio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about.html">About</a>
@@ -70,6 +71,13 @@
       </div>
     </div>
   </div>
+    <!-- social icon -->
+    <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
+      <li class="mb-3"><a class="text-white" href="https://www.linkedin.com/in/jingying-deng-662983253"><i class="ti-linkedin"></i></a></li>
+      <li class="mb-3"><a class="text-white" href="https://www.instagram.com/duojiaoyu/"><i class="ti-instagram"></i></a></li>
+    </ul>
+    <!-- /social icon -->
+  </section>
 
   <!-- background layers -->
   <div class="layer-bg">
@@ -80,22 +88,15 @@
   </div>
 </section>
 
-  <!-- social icon -->
-  <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
-    <li class="mb-3"><a class="text-white" href="#"><i class="ti-linkedin"></i></a></li>
-    <li class="mb-3"><a class="text-white" href="#"><i class="ti-instagram"></i></a></li>
-    <li class="mb-3"><a class="text-white" href="#"><i class="ti-email"></i></a></li>
-  </ul>
-  <!-- /social icon -->
-</section>
+
 
 <!-- about -->
+ <br><br>
 <section class="section" style="padding-top: 20px; padding-bottom: 30px;" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-once="false">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto text-center">
         <p class="font-secondary paragraph-lg ">I am <strong>Jingying (Crystal) Deng</strong> — an <strong>artist</strong>, <strong>researcher</strong>, and <strong>designer</strong> weaving together game design, art, and human-computer interaction. Through creative expression and scientific exploration, I craft immersive experiences that bridge emotion, learning, and technology, empowering deeper connections with users in AI-driven and educational environments. </p>
-        <a href="about.html" class="btn btn-transparent">know more</a>
       </div>
     </div>
   </div>
@@ -386,18 +387,18 @@
 </div>
 
 <!-- footer -->
-<footer class="bg-dark footer-section">
+<footer class="footer-section" style="background-color: #6c80a7;">
   <div class="section">
     <div class="container">
       <div class="row">
       </div>
     </div>
   </div>
-  <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light">Copyright &copy;<script>
+  <div class="border-top text-center py-5" style="border-color: rgba(255,255,255,0.1) !important;">
+    <p class="mb-0" style="color: #ffffff;">Copyright &copy;<script>
         var CurrentYear = new Date().getFullYear()
         document.write(CurrentYear)
-      </script> <a class="text-white-50" target="_blank" href="http://www.crystaldjy.com" title="by Jingying Deng">by Jingying Deng. All rights reserved. </a></p>
+      </script> <a style="color: rgba(255,255,255,0.8);" target="_blank" href="http://www.crystaldjy.com" title="by Jingying Deng">by Jingying Deng. All rights reserved. </a></p>
   </div>
 </footer>
 <!-- /footer -->
@@ -409,14 +410,6 @@
 <!-- slick slider -->
 <script src="plugins/slick/slick.min.js"></script>
 <!-- filter -->
-<script src="plugins/shuffle/shuffle.min.js"></script>
-
-<!-- Main Script -->
-<script src="js/script.js"></script>
-<!-- 插件 js -->
-<script src="plugins/jQuery/jquery.min.js"></script>
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-<script src="plugins/slick/slick.min.js"></script>
 <script src="plugins/shuffle/shuffle.min.js"></script>
 
 <!-- Main Script -->
@@ -527,6 +520,65 @@
           }
         }
       ]
+    });
+  });
+</script>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #6c80a7;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    border: 2px solid white;
+  }
+
+  .back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .back-to-top:hover {
+    background-color: #5a6b8f;
+    transform: translateY(-3px);
+  }
+</style>
+
+<!-- 返回顶部按钮 -->
+<div class="back-to-top">
+  <i class="ti-arrow-up"></i>
+</div>
+
+<!-- 返回顶部按钮的JavaScript -->
+<script>
+  $(document).ready(function() {
+    // 监听滚动事件
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 300) {
+        $('.back-to-top').addClass('show');
+      } else {
+        $('.back-to-top').removeClass('show');
+      }
+    });
+
+    // 点击返回顶部
+    $('.back-to-top').click(function() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
     });
   });
 </script>

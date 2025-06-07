@@ -9,6 +9,9 @@
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="images/icon-bg.svg" />
 
+  <!-- jQuery -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+
   <!-- Plugins -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="plugins/slick/slick.css">
@@ -20,11 +23,13 @@
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
 
+  <!-- Isotope -->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
-<!-- SplitType.js：文字分割 -->
-<script src="https://unpkg.com/split-type"></script>
-<!-- GSAP.js：动画 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <!-- SplitType.js：文字分割 -->
+  <script src="https://unpkg.com/split-type"></script>
+  <!-- GSAP.js：动画 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 </head>
   
 
@@ -38,11 +43,11 @@
 
     <div class="collapse navbar-collapse text-center" id="navigation">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="Home.html">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="gallery.html">Gallery</a>
+        <li class="nav-item  active">
+          <a class="nav-link" href="gallery.html">Portfolio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about.html">About</a>
@@ -63,7 +68,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1 class="text-white font-tertiary">Artwork Gallery</h1>
+        <h1 class="text-white font-tertiary">Portfolio</h1>
       </div>
     </div>
   </div>
@@ -72,108 +77,539 @@
 </section>
 <!-- /page title -->
 
-<section class="portfolio-section py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="portfolio-item">
-            <img src="images/gallery/Background for root 2 (1).jpg" alt="Game 1" class="img-fluid no-download">
+<!-- /portfolio section -->
+<section class="section novi-bg novi-bg-img section-lg bg-default text-center">
+  <div class="container">
+    <div class="isotope-wrap row row-70">
+      <div class="col-sm-12">
+        <ul class="list-nav isotope-filters isotope-filters-horizontal">
+          <li><a class="active" data-isotope-filter="Selected" data-isotope-group="gallery" href="#">Selected</a></li>
+          <li><a data-isotope-filter="design" data-isotope-group="gallery" href="#">UI/UX Design</a></li>
+          <li><a data-isotope-filter="branding" data-isotope-group="gallery" href="#">Branding</a></li>
+          <li><a data-isotope-filter="illustration" data-isotope-group="gallery" href="#">Illustration</a></li>
+          <li><a data-isotope-filter="*" data-isotope-group="gallery" href="#">All</a></li>
+        </ul>
+        <div class="isotope row" data-isotope-layout="fitRows" data-isotope-group="gallery">
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Selected design illustration">
+            <a class="img-thumbnail-variant-3" href="images/gallery/Background for root 2 (1).jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/Background for root 2 (1).jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Selected</li>
+                  <li>UI/UX Design</li>
+                  <li>Illustration</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Selected branding">
+            <a class="img-thumbnail-variant-3" href="images/gallery/Background for root 3.jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/Background for root 3.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Selected</li>
+                  <li>Branding</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Selected illustration">
+            <a class="img-thumbnail-variant-3" href="images/gallery/IMG_3699.jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/IMG_3699.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Selected</li>
+                  <li>Illustration</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="design branding">
+            <a class="img-thumbnail-variant-3" href="images/gallery/IMG_4907.png" data-lightgallery="item">
+              <figure><img src="images/gallery/IMG_4907.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>UI/UX Design</li>
+                  <li>Branding</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Selected illustration">
+            <a class="img-thumbnail-variant-3" href="images/gallery/IMG_4937.png" data-lightgallery="item">
+              <figure><img src="images/gallery/IMG_4937.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Selected</li>
+                  <li>Illustration</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="design">
+            <a class="img-thumbnail-variant-3" href="images/gallery/IMG_4938.png" data-lightgallery="item">
+              <figure><img src="images/gallery/IMG_4938.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>UI/UX Design</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="branding">
+            <a class="img-thumbnail-variant-3" href="images/gallery/IMG_4939.png" data-lightgallery="item">
+              <figure><img src="images/gallery/IMG_4939.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Branding</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Selected design illustration branding">
+            <a class="img-thumbnail-variant-3" href="images/gallery/IMG_4942.png" data-lightgallery="item">
+              <figure><img src="images/gallery/IMG_4942.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Selected</li>
+                  <li>UI/UX Design</li>
+                  <li>Illustration</li>
+                  <li>Branding</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="illustration">
+            <a class="img-thumbnail-variant-3" href="images/gallery/IMG_5240.jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/IMG_5240.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Illustration</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Selected design">
+            <a class="img-thumbnail-variant-3" href="images/gallery/IMG_5241.jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/IMG_5241.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Selected</li>
+                  <li>UI/UX Design</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="branding">
+            <a class="img-thumbnail-variant-3" href="images/gallery/IMG_5242.jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/IMG_5242.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Branding</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="design illustration">
+            <a class="img-thumbnail-variant-3" href="images/gallery/IMG_5245.jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/IMG_5245.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>UI/UX Design</li>
+                  <li>Illustration</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Selected illustration">
+            <a class="img-thumbnail-variant-3" href="images/gallery/Screenshot 2023-09-07 221759.png" data-lightgallery="item">
+              <figure><img src="images/gallery/Screenshot 2023-09-07 221759.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Selected</li>
+                  <li>Illustration</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="design">
+            <a class="img-thumbnail-variant-3" href="images/gallery/Untitled_Artwork.jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/Untitled_Artwork.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>UI/UX Design</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Selected branding">
+            <a class="img-thumbnail-variant-3" href="images/gallery/WeChat Image_20221010180533.jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/WeChat Image_20221010180533.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Selected</li>
+                  <li>Branding</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="design illustration">
+            <a class="img-thumbnail-variant-3" href="images/gallery/图片_20230906173331.jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/图片_20230906173331.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>UI/UX Design</li>
+                  <li>Illustration</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="illustration">
+            <a class="img-thumbnail-variant-3" href="images/gallery/图片_20230906173337.jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/图片_20230906173337.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Illustration</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Selected design">
+            <a class="img-thumbnail-variant-3" href="images/gallery/图片_20230906173400.jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/图片_20230906173400.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Selected</li>
+                  <li>UI/UX Design</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="branding">
+            <a class="img-thumbnail-variant-3" href="images/gallery/左侧111.jpg" data-lightgallery="item">
+              <figure><img src="images/gallery/左侧111.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block no-download"/></figure>
+              <div class="caption">
+                <span class="icon novi-icon hover-top-element linear-icon-picture"></span>
+                <ul class="list-inline-tag hover-top-element">
+                  <li>Branding</li>
+                </ul>
+                <p class="heading-5 hover-top-element">Project Title</p>
+                <div class="divider"></div>
+                <p class="small hover-bottom-element">Project description goes here.</p>
+                <span class="icon novi-icon arrow-right linear-icon-plus"></span>
+              </div>
+            </a>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="portfolio-item">
-            <img src="images/gallery/Background for root 3.jpg" alt="Game 2" class="img-fluid no-download">
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="portfolio-item">
-            <img src="images/gallery/IMG_3699.jpg" alt="Game 3" class="img-fluid no-download">
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/IMG_4907.png" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/IMG_4937.png" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/IMG_4938.png" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/IMG_4939.png" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/IMG_4942.png" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/IMG_5240.jpg" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/IMG_5241.jpg" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/IMG_5242.jpg" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/IMG_5245.jpg" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/Screenshot 2023-09-07 221759.png" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/Untitled_Artwork.jpg" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/WeChat Image_20221010180533.jpg" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/图片_20230906173331.jpg" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/图片_20230906173337.jpg" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/图片_20230906173400.jpg" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
-              <img src="images/gallery/左侧111.jpg" alt="Game 3" class="img-fluid no-download">
-            </div>
-        </div>
-        <!-- 添加更多游戏封面 -->
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+  .isotope-filters-horizontal {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .isotope-filters-horizontal li {
+    margin: 0 10px;
+  }
+
+  .isotope-filters-horizontal a {
+    color: #6c80a7;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .isotope-filters-horizontal a.active,
+  .isotope-filters-horizontal a:hover {
+    background-color: #6c80a7;
+    color: white;
+  }
+
+  .img-thumbnail-variant-3 {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .img-thumbnail-variant-3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .img-thumbnail-variant-3 figure {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .img-thumbnail-variant-3 img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .img-thumbnail-variant-3:hover img {
+    transform: scale(1.05);
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .img-thumbnail-variant-3:hover .caption {
+    transform: translateY(0);
+  }
+
+  .list-inline-tag {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+  }
+
+  .list-inline-tag li {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+  }
+
+  .divider {
+    height: 1px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 10px 0;
+  }
+
+  .hover-top-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    color: white;
+  }
+
+  .img-thumbnail-variant-3:hover .hover-top-element {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hover-bottom-element {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    color: white;
+  }
+
+  .img-thumbnail-variant-3:hover .hover-bottom-element {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .heading-5 {
+    color: white;
+  }
+
+  .small {
+    color: white;
+  }
+
+  /* 新增：调整图片布局 */
+  .isotope {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .isotope-item {
+    padding: 15px;
+    width: 33.333%; /* 每行3张图片 */
+  }
+
+  @media (max-width: 991px) {
+    .isotope-item {
+      width: 50%; /* 中等屏幕每行2张 */
+    }
+  }
+
+  @media (max-width: 575px) {
+    .isotope-item {
+      width: 100%; /* 小屏幕每行1张 */
+    }
+  }
+</style>
+
+<script>
+  $(document).ready(function() {
+    // 初始化isotope
+    var $grid = $('.isotope').isotope({
+      itemSelector: '.isotope-item',
+      layoutMode: 'fitRows',
+      transitionDuration: '0.4s',
+      getSortData: {
+        height: function(itemElem) {
+          var height = $(itemElem).find('img').height();
+          return height;
+        }
+      }
+    });
+
+    // 默认显示Selected分类
+    $grid.isotope({ filter: '[data-filter*="Selected"]' });
+
+    // 过滤功能
+    $('.isotope-filters-horizontal').on('click', 'a', function(e) {
+      e.preventDefault();
+      var filterValue = $(this).attr('data-isotope-filter');
+      
+      // 处理"All"选项
+      if (filterValue === '*') {
+        $grid.isotope({ filter: '*' });
+      } else {
+        // 处理其他分类
+        $grid.isotope({ filter: '[data-filter*="' + filterValue + '"]' });
+      }
+      
+      $('.isotope-filters-horizontal a').removeClass('active');
+      $(this).addClass('active');
+
+      // 按高度排序，使相近高度的图片在同一行
+      $grid.isotope('updateSortData');
+      $grid.isotope({ sortBy: 'height' });
+    });
+
+    // 图片加载完成后重新布局
+    $grid.imagesLoaded().progress(function() {
+      $grid.isotope('layout');
+    });
+  });
+</script>
 
 <!-- Contact Card Section -->
 <section class="section section-on-footer bg-white">
@@ -247,24 +683,59 @@
   </div>
   
   <!-- footer -->
-  <footer class="bg-dark footer-section">
+  <footer class="footer-section" style="background-color: #6c80a7;">
     <div class="section">
       <div class="container">
         <div class="row">
         </div>
       </div>
     </div>
-    <div class="border-top text-center border-dark py-5">
-      <p class="mb-0 text-light">Copyright &copy;<script>
+    <div class="border-top text-center py-5" style="border-color: rgba(255,255,255,0.1) !important;">
+      <p class="mb-0" style="color: #ffffff;">Copyright &copy;<script>
           var CurrentYear = new Date().getFullYear()
           document.write(CurrentYear)
-        </script> <a class="text-white-50" target="_blank" href="http://www.crystaldjy.com" title="by Jingying Deng">by Jingying Deng. All rights reserved. </a></p>
+        </script> <a style="color: rgba(255,255,255,0.8);" target="_blank" href="http://www.crystaldjy.com" title="by Jingying Deng">by Jingying Deng. All rights reserved. </a></p>
     </div>
   </footer>
   <!-- /footer -->
   
-  <!-- jQuery -->
-  <script src="plugins/jQuery/jquery.min.js"></script>
+  <style>
+    .back-to-top {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      width: 40px;
+      height: 40px;
+      background-color: #6c80a7;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      border: 2px solid white;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background-color: #5a6b8f;
+      transform: translateY(-3px);
+    }
+  </style>
+
+  <!-- 返回顶部按钮 -->
+  <div class="back-to-top">
+    <i class="ti-arrow-up"></i>
+  </div>
+
   <!-- Bootstrap JS -->
   <script src="plugins/bootstrap/bootstrap.min.js"></script>
   <!-- slick slider -->
@@ -274,15 +745,7 @@
   
   <!-- Main Script -->
   <script src="js/script.js"></script>
-  <!-- 插件 js -->
-  <script src="plugins/jQuery/jquery.min.js"></script>
-  <script src="plugins/bootstrap/bootstrap.min.js"></script>
-  <script src="plugins/slick/slick.min.js"></script>
-  <script src="plugins/shuffle/shuffle.min.js"></script>
-  
-  <!-- Main Script -->
-  <script src="js/script.js"></script>
-  
+
   <!-- AOS 动画库 -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
@@ -311,6 +774,28 @@
             }
           );
         });
+      });
+    });
+  </script>
+
+  <!-- 返回顶部按钮的JavaScript -->
+  <script>
+    $(document).ready(function() {
+      // 监听滚动事件
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+          $('.back-to-top').addClass('show');
+        } else {
+          $('.back-to-top').removeClass('show');
+        }
+      });
+
+      // 点击返回顶部
+      $('.back-to-top').click(function() {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
       });
     });
   </script>
