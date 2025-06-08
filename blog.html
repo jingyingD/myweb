@@ -1,71 +1,43 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-
-  <!-- Basic Page Needs
-  ================================================== -->
   <meta charset="utf-8">
-  <title>Kross - Creative Portfolio Template</title>
-
-  <!-- Mobile Specific Metas
-  ================================================== -->
+  <title>Jingying(Crystal) D | Artist, Designer, Researcher in EdTech</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Creative Portfolio Template">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-  
-  <!-- ** Plugins Needed for the Project ** -->
-  <!-- Bootstrap -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon-bg.svg" />
+
+  <!-- jQuery -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+
+  <!-- Plugins -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-  <!-- slick slider -->
   <link rel="stylesheet" href="plugins/slick/slick.css">
-  <!-- themefy-icon -->
   <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
 
-  <style>
-    .back-to-top {
-      position: fixed;
-      right: 30px;
-      bottom: 30px;
-      width: 40px;
-      height: 40px;
-      background-color: #6c80a7;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 999;
-      border: 2px solid white;
-    }
+  <!-- Isotope -->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <!-- imagesLoaded -->
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 
-    .back-to-top.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .back-to-top:hover {
-      background-color: #5a6b8f;
-      transform: translateY(-3px);
-    }
-  </style>
-
+  <!-- SplitType.js：文字分割 -->
+  <script src="https://unpkg.com/split-type"></script>
+  <!-- GSAP.js：动画 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 </head>
-<body>
   
 
 <header class="navigation fixed-top">
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand font-tertiary h3" href="index.html"><img src="images/logo.png" alt="Myself"></a>
+    <a class="navbar-brand font-tertiary h3" href="Home.html"><img src="images/logo.png" alt="Myself"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
       aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -73,17 +45,17 @@
 
     <div class="collapse navbar-collapse text-center" id="navigation">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">about</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="blog.html">Blog</a>
+          <a class="nav-link" href="Home.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact</a>
@@ -94,112 +66,211 @@
 </header>
 
 <!-- page title -->
-<section class="page-title bg-primary position-relative">
+<section class="page-title-alt bg-primary position-relative">
   <div class="container">
     <div class="row">
-      <div class="col-12 text-center">
-        <h1 class="text-white font-tertiary">Blogs</h1>
+      <div class="col-12">
+        <h1 class="text-white font-tertiary">Blog</h1>
       </div>
     </div>
   </div>
   <!-- background shapes -->
-  <img src="images/illustrations/page-title.png" alt="illustrations" class="bg-shape-1 w-100">
-  <img src="images/illustrations/leaf-pink-round.png" alt="illustrations" class="bg-shape-2">
-  <img src="images/illustrations/dots-cyan.png" alt="illustrations" class="bg-shape-3">
-  <img src="images/illustrations/leaf-orange.png" alt="illustrations" class="bg-shape-4">
-  <img src="images/illustrations/leaf-yellow.png" alt="illustrations" class="bg-shape-5">
-  <img src="images/illustrations/dots-group-cyan.png" alt="illustrations" class="bg-shape-6">
-  <img src="images/illustrations/leaf-cyan-lg.png" alt="illustrations" class="bg-shape-7">
+  <img src="images/illustrations/star-lg.png" alt="illustrations" class="bg-shape-1 w-100">
 </section>
 <!-- /page title -->
 
 <!-- blog -->
 <section class="section">
   <div class="container">
-    <div class="row">
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <article class="card shadow">
-            <img class="rounded card-img-top" src="images/blog/post-5.jpg" alt="post-thumb">
-            <div class="card-body">
-              <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
-              </h4>
-              <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et
-                dolore magna aliqua.</p>
-              <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
-            </div>
-          </article>
+    <div class="isotope-wrap row row-70">
+      <div class="col-sm-12">
+        <ul class="list-nav isotope-filters isotope-filters-horizontal">
+          <li><a class="active" data-isotope-filter="*" data-isotope-group="gallery" href="#">All</a></li>
+          <li><a data-isotope-filter="game" data-isotope-group="gallery" href="#">Game Productions</a></li>
+          <li><a data-isotope-filter="research" data-isotope-group="gallery" href="#">Still on working</a></li>
+          <li><a data-isotope-filter="artwork" data-isotope-group="gallery" href="icon.html">Artwork</a></li>
+        </ul>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mb-4" data-tags="research">
+            <article class="card shadow">
+              <img class="rounded card-img-top" src="images/blog/post-1.png" alt="post-thumb">
+              <div class="card-body">
+                <h4 class="card-title"><a class="text-dark" href="blog-single.html">StudyCrafter & StudyHelper: Qualitative Coding of Student-AI Interactions</a></h4>
+                <p class="cars-text">This project is a qualitative coding study of student-AI interactions in StudyCrafter and StudyHelper, exploring how students interact with AI-powered tools and how these interactions impact their learning.</p>
+                <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4" data-tags="research">
+            <article class="card shadow">
+              <img class="rounded card-img-top" src="images/blog/post-2.png" alt="post-thumb">
+              <div class="card-body">
+                <h4 class="card-title"><a class="text-dark" href="blog-single.html">Investigating User Engagement with AI-Driven Character Strengths Chatbots</a></h4>
+                <p class="cars-text">This project is a study of student-AI interactions in AI-Driven Character Strengths chatbots, exploring how students interact with AI-powered tools and how these interactions impact their emotional engagement.</p>
+                <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4" data-tags="research">
+            <article class="card shadow">
+              <img class="rounded card-img-top" src="images/blog/post-3.jpg" alt="post-thumb">
+              <div class="card-body">
+                <h4 class="card-title"><a class="text-dark" href="blog-single.html">Exploring the Affective Impacts of Spatial and Movement-Related Audio Features in
+                  Music-Based Virtual Reality Experiences</a></h4>
+                <p class="cars-text">This project is a study of the affective impacts of spatial and movement-related audio features in music-based virtual reality experiences, exploring how these features impact the emotional engagement of users.</p>
+                <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4" data-tags="research">
+            <article class="card shadow">
+              <img class="rounded card-img-top" src="images/blog/post-5.png" alt="post-thumb">
+              <div class="card-body">
+                <h4 class="card-title"><a class="text-dark" href="blog-single.html">User Experience Research and Multimodal Analysis in Game Environments</a></h4>
+                <p class="cars-text"> Gamer user experience research and multimodal analysis in game environments. </p>
+                <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4" data-tags="research">
+            <article class="card shadow">
+              <img class="rounded card-img-top" src="images/blog/post-4.jpg" alt="post-thumb">
+              <div class="card-body">
+                <h4 class="card-title"><a class="text-dark" href="blog-single.html">Computational Quilting: Arts-Based Research on Imagining Future Communities</a></h4>
+                <p class="cars-text">This project is a computational quilting study of communities, exploring how these communities are imagined and how they are created.</p>
+                <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4" data-tags="research">
+            <article class="card shadow">
+              <img class="rounded card-img-top" src="images/blog/post-6.jpg" alt="post-thumb">
+              <div class="card-body">
+                <h4 class="card-title"><a class="text-dark" href="blog-single.html">A Study of Pedagogical Approaches to English Accent Instruction</a></h4>
+                <p class="cars-text">This project is a study of the impact of pedagogical approaches to English accent instruction, exploring how the difference in learning of English accent.</p>
+                <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4" data-tags="game">
+            <article class="card shadow">
+              <img class="rounded card-img-top" src="images/game productions/item2.png" alt="post-thumb">
+              <div class="card-body">
+                <h4 class="card-title"><a class="text-dark" href="pandamonium.html">Pandamonium</a></h4>
+                <p class="cars-text">Pandamonium is a single-player psychological horror game. You have been taken. The only way out is through three eerie mazes where roaming panda-suited strangers are on the hunt. Escape them, or become them.</p>
+                <a href="pandamonium.html" class="btn btn-xs btn-primary">Read More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4" data-tags="artwork">
+            <article class="card shadow">
+              <img class="rounded card-img-top" src="images/gallery/IMG_6649.PNG" alt="post-thumb">
+              <div class="card-body">
+                <h4 class="card-title"><a class="text-dark" href="icon.html">Icon Design</a></h4>
+                <p class="cars-text">This is icon design art collection. Click to view more.</p>
+                <a href="icon.html" class="btn btn-xs btn-primary">Read More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4" data-tags="game">
+            <article class="card shadow">
+              <img class="rounded card-img-top" src="images/gallery/未标题-2(1)(1).png" alt="post-thumb">
+              <div class="card-body">
+                <h4 class="card-title"><a class="text-dark" href="petcard.html">Pet Card</a></h4>
+                <p class="cars-text">This is a board cardgame. Let's play with these cute pets!</p>
+                <a href="petcard.html" class="btn btn-xs btn-primary">Read More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4" data-tags="artwork">
+            <article class="card shadow">
+              <img class="rounded card-img-top" src="images/gallery/IMG_6648.PNG" alt="post-thumb">
+              <div class="card-body">
+                <h4 class="card-title"><a class="text-dark" href="cardframe.html">Card Frame Design</a></h4>
+                <p class="cars-text">This is a card frame design collection. Click to view more.</p>
+                <a href="cardframe.html" class="btn btn-xs btn-primary">Read More</a>
+              </div>
+            </article>
+          </div>
         </div>
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <article class="card shadow">
-          <img class="rounded card-img-top" src="images/blog/post-2.jpg" alt="post-thumb">
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
-            </h4>
-            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.</p>
-            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
-          </div>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <article class="card shadow">
-          <img class="rounded card-img-top" src="images/blog/post-3.jpg" alt="post-thumb">
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
-            </h4>
-            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.</p>
-            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
-          </div>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <article class="card shadow">
-          <img class="rounded card-img-top" src="images/blog/post-4.jpg" alt="post-thumb">
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
-            </h4>
-            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.</p>
-            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
-          </div>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <article class="card shadow">
-          <img class="rounded card-img-top" src="images/blog/post-5.jpg" alt="post-thumb">
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
-            </h4>
-            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.</p>
-            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
-          </div>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <article class="card shadow">
-          <img class="rounded card-img-top" src="images/blog/post-2.jpg" alt="post-thumb">
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
-            </h4>
-            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.</p>
-            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
-          </div>
-        </article>
       </div>
     </div>
   </div>
 </section>
-<!-- /blog -->
 
+<style>
+  .isotope-filters-horizontal {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .isotope-filters-horizontal li {
+    margin: 0 10px;
+  }
+
+  .isotope-filters-horizontal a {
+    color: #6c80a7;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .isotope-filters-horizontal a.active,
+  .isotope-filters-horizontal a:hover {
+    background-color: #6c80a7;
+    color: white;
+  }
+
+  .isotope {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .isotope-item {
+    padding: 15px;
+    width: 33.333%;
+  }
+
+  @media (max-width: 991px) {
+    .isotope-item {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .isotope-item {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  $(document).ready(function() {
+    // 过滤功能
+    $('.isotope-filters-horizontal').on('click', 'a', function(e) {
+      e.preventDefault();
+      var filterValue = $(this).attr('data-isotope-filter');
+      
+      // 移除所有active类
+      $('.isotope-filters-horizontal a').removeClass('active');
+      // 添加当前点击项的active类
+      $(this).addClass('active');
+      
+      // 显示/隐藏相应的项目
+      if (filterValue === '*') {
+        $('.col-lg-4').show();
+      } else {
+        $('.col-lg-4').hide();
+        $('.col-lg-4[data-tags="' + filterValue + '"]').show();
+      }
+    });
+  });
+</script>
 
 
 <!-- Contact Card Section -->
@@ -274,7 +345,7 @@
 </div>
 
 <!-- footer -->
-<footer class="footer-section" style="background-color: #6c80a7;">
+<footer class="footer-section" style="background-color: #607b9f;">
   <div class="section">
     <div class="container">
       <div class="row">
@@ -290,11 +361,6 @@
 </footer>
 <!-- /footer -->
 
-<!-- 返回顶部按钮 -->
-<div class="back-to-top">
-  <i class="ti-arrow-up"></i>
-</div>
-
 <!-- jQuery -->
 <script src="plugins/jQuery/jquery.min.js"></script>
 <!-- Bootstrap JS -->
@@ -307,24 +373,34 @@
 <!-- Main Script -->
 <script src="js/script.js"></script>
 
-<!-- 返回顶部按钮的JavaScript -->
+<!-- AOS 动画库 -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  $(document).ready(function() {
-    // 监听滚动事件
-    $(window).scroll(function() {
-      if ($(this).scrollTop() > 300) {
-        $('.back-to-top').addClass('show');
-      } else {
-        $('.back-to-top').removeClass('show');
-      }
-    });
+  AOS.init();
+</script>
+<script>
+  window.addEventListener('load', () => {
+    // 分别拆分 .jump-text 和 .section-title 成单个字母
+    new SplitType('.jump-text', { types: 'chars' });
+    new SplitType('.section-title', { types: 'chars' });
 
-    // 点击返回顶部
-    $('.back-to-top').click(function() {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 800);
-      return false;
+    // 统一选择所有需要跳动的文字
+    const jumpTexts = document.querySelectorAll('.jump-text, .section-title');
+
+    jumpTexts.forEach(text => {
+      text.addEventListener('mouseenter', () => {
+        gsap.fromTo(text.querySelectorAll('.char'), 
+          { y: 0 }, 
+          { 
+            y: -15, 
+            duration: 0.3, 
+            ease: "power2.out", 
+            yoyo: true, 
+            repeat: 1,
+            stagger: 0.05 // 核心：一颗一颗顺序跳动
+          }
+        );
+      });
     });
   });
 </script>
@@ -402,6 +478,65 @@
           }
         }
       ]
+    });
+  });
+</script>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #607b9f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    border: 2px solid white;
+  }
+
+  .back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .back-to-top:hover {
+    background-color: #5a6b8f;
+    transform: translateY(-3px);
+  }
+</style>
+
+<!-- 返回顶部按钮 -->
+<div class="back-to-top">
+  <i class="ti-arrow-up"></i>
+</div>
+
+<!-- 返回顶部按钮的JavaScript -->
+<script>
+  $(document).ready(function() {
+    // 监听滚动事件
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 300) {
+        $('.back-to-top').addClass('show');
+      } else {
+        $('.back-to-top').removeClass('show');
+      }
+    });
+
+    // 点击返回顶部
+    $('.back-to-top').click(function() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
     });
   });
 </script>
