@@ -507,6 +507,25 @@
     padding: 0 !important;
     display: block;
   }
+
+  /* 手机模式下图片更大 */
+  @media (max-width: 767px) {
+    .swiper-slide img {
+      height: 350px !important;
+      object-fit: contain;
+    }
+    
+    .mySwiper {
+      margin: 20px 0 !important;
+    }
+  }
+
+  /* 平板模式 */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .swiper-slide img {
+      height: 400px !important;
+    }
+  }
 </style>
 
 <!-- 返回顶部按钮 -->
@@ -574,6 +593,26 @@
     pagination: {
       el: ".swiper-pagination",
       clickable: true
+    },
+    breakpoints: {
+      // 手机模式 (小于768px)
+      0: {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 10
+      },
+      // 平板模式 (768px - 991px)
+      768: {
+        slidesPerView: 2,
+        centeredSlides: false,
+        spaceBetween: 20
+      },
+      // 桌面模式 (992px及以上)
+      992: {
+        slidesPerView: 3,
+        centeredSlides: true,
+        spaceBetween: 0
+      }
     }
   });
 </script>

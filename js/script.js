@@ -157,4 +157,26 @@
         }
     });
 
+    // 禁止/恢复body滚动
+function toggleBodyScroll(disable) {
+  if (disable) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+}
+
+// 菜单展开收起事件
+$(document).ready(function() {
+  var navbarCollapse = $('#navigation');
+  if (navbarCollapse.length) {
+    navbarCollapse.on('show.bs.collapse', function () {
+      toggleBodyScroll(true);
+    });
+    navbarCollapse.on('hide.bs.collapse', function () {
+      toggleBodyScroll(false);
+    });
+  }
+});
+
 })(jQuery);

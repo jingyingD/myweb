@@ -154,62 +154,47 @@
                     <div class="swiper-pagination"></div>
                   </div>
                   <br><br><br><br><br><br><br><br><br>
-                  <h2 class="h3 mb-4">Related projects</h2>
-                  <div class="row gy-4 gx-5">
-                    <div class="col-lg-4">
-                      <div class="listing-item ps-0">
-                        <div class="position-relative">
-                          <ul class="list-inline listing-tags m-0">
-                          </ul><a class="reset-anchor d-block listing-img-holder" href="detail.html"><img class="img-fluid rounded-lg" src="img/portfolio-6.jpg" alt="Banana Lady"/>
-                            <p class="mb-0 text-primary small d-flex align-items-center listing-btn"> <span>Read More</span>
-                              <svg class="svg-icon text-primary svg-icon-sm ms-1">
-                                <use xlink:href="#arrow-right-1"> </use>
-                              </svg>
-                            </p></a>
+                   <!-- Similar Stories 博文推荐区域 -->
+                   <section class="section">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-12 text-center">
+                          <h2 class="section-title">Similar Projects</h2>
                         </div>
-                        <div class="py-3"><a class="reset-anchor" href="detail.html">
-                            <h2 class="h5 listing-item-heading">Banana Lady</h2></a>
-                          <p class="text-sm mb-0 listing-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                          <article class="card shadow">
+                            <img class="rounded card-img-top" src="images/game productions/item5.png" alt="Sanitarium Development">
+                            <div class="card-body">
+                              <h4 class="card-title"><a class="text-dark" href="sanitarium.html">Sanitarium</a></h4>
+                              <p class="cars-text">Sanitarium is a 3D zombie apocalypse game. You are a survivor trying to find a way out of the hospital.</p>
+                              <a href="sanitarium.html" class="btn btn-xs btn-primary">Read More</a>
+                            </div>
+                          </article>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="listing-item ps-0">
-                        <div class="position-relative">
-                          <ul class="list-inline listing-tags m-0">
-                            <li class="list-inline-item"><a class="reset-anchor fw-normal text-gray text-sm" href="detail.html">Creative</a></li>
-                          </ul><a class="reset-anchor d-block listing-img-holder" href="detail.html"><img class="img-fluid rounded-lg" src="img/portfolio-4.jpg" alt="Treasure Haunted"/>
-                            <p class="mb-0 text-primary small d-flex align-items-center listing-btn"> <span>Look inside</span>
-                              <svg class="svg-icon text-primary svg-icon-sm ms-1">
-                                <use xlink:href="#arrow-right-1"> </use>
-                              </svg>
-                            </p></a>
+                        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                          <article class="card shadow">
+                            <img class="rounded card-img-top" src="images/game productions/item3.png" alt="Sanitarium Development">
+                            <div class="card-body">
+                              <h4 class="card-title"><a class="text-dark" href="oncall.html">On Call</a></h4>
+                              <p class="cars-text">On Call is a visual novel that takes you through a 3-day rotation at Merritt General Hospital. </p>
+                              <a href="oncall.html" class="btn btn-xs btn-primary">Read More</a>
+                            </div>
+                          </article>
                         </div>
-                        <div class="py-3"><a class="reset-anchor" href="detail.html">
-                            <h2 class="h5 listing-item-heading">Treasure Haunted</h2></a>
-                          <p class="text-sm mb-0 listing-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="listing-item ps-0">
-                        <div class="position-relative">
-                          <ul class="list-inline listing-tags m-0">
-                            <li class="list-inline-item"><a class="reset-anchor fw-normal text-gray text-sm" href="detail.html">Creative</a></li>
-                          </ul><a class="reset-anchor d-block listing-img-holder" href="detail.html"><img class="img-fluid rounded-lg" src="img/portfolio-5.jpg" alt="Best Friends"/>
-                            <p class="mb-0 text-primary small d-flex align-items-center listing-btn"> <span>Look inside</span>
-                              <svg class="svg-icon text-primary svg-icon-sm ms-1">
-                                <use xlink:href="#arrow-right-1"> </use>
-                              </svg>
-                            </p></a>
-                        </div>
-                        <div class="py-3"><a class="reset-anchor" href="detail.html">
-                            <h2 class="h5 listing-item-heading">Best Friends</h2></a>
-                          <p class="text-sm mb-0 listing-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                          <article class="card shadow">
+                            <img class="rounded card-img-top" src="images/game productions/item6.png" alt="AI in Games">
+                            <div class="card-body">
+                              <h4 class="card-title"><a class="text-dark" href="lostbeacon.html">Lost Beacon</a></h4>
+                              <p class="cars-text">Lost Beacon is a the breathtaking 3D puzzle platformer from Black Banshee Studios.</p>
+                              <a href="lostbeacon.html" class="btn btn-xs btn-primary">Read More</a>
+                            </div>
+                          </article>
                         </div>
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
     </section>
@@ -531,6 +516,25 @@
     padding: 0 !important;
     display: block;
   }
+
+  /* 手机模式下图片更大 */
+  @media (max-width: 767px) {
+    .swiper-slide img {
+      height: 350px !important;
+      object-fit: contain;
+    }
+    
+    .mySwiper {
+      margin: 20px 0 !important;
+    }
+  }
+
+  /* 平板模式 */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .swiper-slide img {
+      height: 400px !important;
+    }
+  }
 </style>
 
 <!-- 返回顶部按钮 -->
@@ -598,6 +602,26 @@
     pagination: {
       el: ".swiper-pagination",
       clickable: true
+    },
+    breakpoints: {
+      // 手机模式 (小于768px)
+      0: {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 10
+      },
+      // 平板模式 (768px - 991px)
+      768: {
+        slidesPerView: 2,
+        centeredSlides: false,
+        spaceBetween: 20
+      },
+      // 桌面模式 (992px及以上)
+      992: {
+        slidesPerView: 3,
+        centeredSlides: true,
+        spaceBetween: 20
+      }
     }
   });
 </script>
