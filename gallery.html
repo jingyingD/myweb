@@ -41,23 +41,19 @@
       aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse text-center" id="navigation">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" href="Home.html">Home</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="portfolio.html">Portfolio</a>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
         </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="blog.html">Blog</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="gallery.html">Gallery</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
         </li>
       </ul>
     </div>
@@ -988,39 +984,13 @@
 </section>
 
 <!-- Contact Modal -->
-<div id="contactModal" class="modal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center;">
-  <div class="modal-card" style="background: #f8f6f8; max-width: 650px; width: 95%; padding: 40px; border-radius: 12px; position: relative; border: 2px solid #4B0082;">
-    <span id="closeModal" style="position: absolute; top: 10px; right: 20px; font-size: 24px; cursor: pointer; color: #4B0082;">&times;</span>
-    <div class="text-center mb-4">
-      <img src="images/me.jpg" alt="avatar" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 10px;">
-      <h4 style="color: #4B0082;"><strong>Let's Collaborate or Connect!</strong></h4>
-      <p><strong>Thank you for reaching out!</strong> I'm excited to connect and explore how we can collaborate or create something impactful together. You can also email me directly at <a href="mailto:you@example.com" style="color: #4B0082; text-decoration: underline;">contact@crystaldjy.com</a></p>
-      <p>- Jingying Deng, Creative Technologist</p>
+<!-- Contact Modal -->
+<div id="contactModal" class="modal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center; padding: 60px 20px; box-sizing: border-box;">
+  <div class="modal-card" style="background: #f8f6f8; max-width: 900px; width: 100%; max-height: calc(100vh - 120px); padding: 20px; border-radius: 12px; position: relative; border: 2px solid #4B0082; margin: auto; display: flex; flex-direction: column; overflow: hidden;">
+    <button id="closeModal" type="button" style="position: absolute; top: 15px; right: 15px; font-size: 28px; cursor: pointer; color: #4B0082; z-index: 10002; background: #ffffff; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; line-height: 1; box-shadow: 0 2px 8px rgba(0,0,0,0.3); font-weight: bold; pointer-events: auto; border: 2px solid #4B0082; padding: 0; margin: 0;">&times;</button>
+    <div style="position: relative; flex: 1; overflow: hidden; padding-bottom: 20px;">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSebg_L_hLxHJ3VHeNr1DBM6mAsAhQV3NnL2fn9JInepY7AxtQ/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" style="border: none; display: block; min-height: 600px;">Loading…</iframe>
     </div>
-    <form action="https://crimson-bush-d373.dengjingying97.workers.dev/" method="POST" class="row">
-      <div class="col-md-6">
-        <input type="text" name="name" placeholder="Name" class="form-control px-3 py-2 mb-4" style="border: 1px solid #4B0082;" required>
-      </div>
-      <div class="col-md-6">
-        <input type="email" name="email" placeholder="Email" class="form-control px-3 py-2 mb-4" style="border: 1px solid #4B0082;" required>
-      </div>
-
-      <div class="col-12 mb-3">
-        <label>What would you like us to explore together?</label><br>
-        <label><input type="radio" name="service" value="dev"> Collaborating on a creative project</label>
-        <label><input type="radio" name="service" value="white"> Discussing research or ideas</label>
-        <label><input type="radio" name="service" value="design"> Seeking design or creative direction</label>
-        <label><input type="radio" name="service" value="unsure"> Simply connecting and saying hi</label>
-        <label><input type="radio" name="service" value="unsure"> Other (please share!)</label>
-      </div>
-
-      <div class="col-12">
-        <textarea name="message" class="form-control px-3 py-2 mb-4" placeholder="Tell me a little about your idea or project ✨" style="border: 1px solid #4B0082;" required></textarea>
-      </div>
-      <div class="col-12 text-center">
-        <button class="btn btn-primary w-100">send</button>
-      </div>
-    </form>
   </div>
 </div>
 
@@ -1098,47 +1068,30 @@
 
 <!-- JS for modal toggle -->
 <script>
-  document.getElementById("openModal").addEventListener("click", function() {
-    document.getElementById("contactModal").style.display = "flex";
-  });
-  document.getElementById("closeModal").addEventListener("click", function() {
-    document.getElementById("contactModal").style.display = "none";
-  });
-  window.addEventListener("click", function(e) {
-    if (e.target === document.getElementById("contactModal")) {
-      document.getElementById("contactModal").style.display = "none";
-    }
-  });
-</script>
-<script>
-  document.querySelector("#contactModal form").addEventListener("submit", async function(e) {
-    e.preventDefault();
-    const form = this;
-
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: new FormData(form)
+  document.addEventListener("DOMContentLoaded", function() {
+    var openModalBtn = document.getElementById("openModal");
+    var closeModalBtn = document.getElementById("closeModal");
+    var contactModal = document.getElementById("contactModal");
+    
+    if (openModalBtn) {
+      openModalBtn.addEventListener("click", function() {
+        contactModal.style.display = "flex";
       });
-
-      if (response.ok) {
-        // 1. 显示小提示
-        const toast = document.getElementById("successToast");
-        toast.style.display = "block";
-
-        // 2. 2秒后关小提示+关大弹窗+清空表单
-        setTimeout(() => {
-          toast.style.display = "none"; // 关闭小提示
-          document.getElementById("contactModal").style.display = "none"; // 关闭大弹窗
-          form.reset(); // 重置表单内容
-        }, 2000); // 显示2秒
-      } else {
-        alert("Oops! Something went wrong. Please try again.");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("Network error. Please try again later.");
     }
+    
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        contactModal.style.display = "none";
+      });
+    }
+    
+    window.addEventListener("click", function(e) {
+      if (e.target === contactModal) {
+        contactModal.style.display = "none";
+      }
+    });
   });
 </script>
 
